@@ -173,6 +173,12 @@ function shapeToWord(shape) {
             return 'Conoid';
         case 'st':
             return 'Trilateral';
+        case 'tt':
+            return 'Pyramid';
+        case 'ss':
+            return 'Cube';
+        case 'cc':
+            return 'Sphere';
     }
 }
 
@@ -211,3 +217,30 @@ function swapShapes() {
 
     shapesToSwap = [];
 }
+
+function check() {
+    const callouts = document.getElementById('callouts').innerText.toLowerCase().split('');
+    var result = document.getElementById('result');
+
+    for(i = 0; i < callouts.length; i++) {
+        var shapeElement = document.getElementById(`shape${i}`);
+        if(shapeElement.dataset.shape.includes(callouts[i])) {
+
+            result.innerText = 'Incorrect!'
+            result.style = 'display: block;'
+            return false;
+        }
+    }
+
+    result.innerText = 'Correct!'
+    result.style = 'display: block;'
+    return true;
+}
+
+window.check = check;
+
+function reset() {
+    window.location.reload();
+}
+
+window.reset = reset;

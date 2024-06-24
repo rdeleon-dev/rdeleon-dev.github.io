@@ -14,8 +14,18 @@
         <div class="text(2xl gray-200 center) mt-10">Call Outs: <div id="callouts">Trigon</div></div>
         <div class="text(2xl gray-200 center) mt-10">Your Shape: <div id="buff">Trigon</div></div>
     </div>
+
+    <div class="text(2xl gray-200 center) mt-3">
+        Actions:
+        <button class="btn p-1 rounded bg-green-900" onclick="check()" id="check">Check</button>
+        <button class="btn p-1 rounded bg-red-900" onclick="reset()" id="reset">Reset</button>
+    </div>
+
+    <div class="text(2xl gray-200 center) mt-3" id="result" style="display: none;">
+        Correct!
+    </div>
     
-    <div class="w-[1200px] h-[700px] mt-5 mx-auto px-52 pt-10 grid grid-cols-5 grid-rows-3 justify-items-start items-start bg-gray-700 rounded">
+    <div class="w-[1200px] h-[650px] mt-5 mx-auto px-52 pt-10 grid grid-cols-5 grid-rows-3 justify-items-start items-start bg-gray-700 rounded">
         <div class=""></div>
         <div class="self-end" id="spotLeft">
             <img data-type="enemy" src="img/hive.png">
