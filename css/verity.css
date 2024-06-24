@@ -8,25 +8,18 @@
 }
 
 #shapeLeft {
-    background-image: url('../img/tc.png');
-    background-size: contain;
-    width: 40%;
-    height: 40%;
-    background-position: top left;
-    background-repeat: no-repeat;
+    background-image: url('../img/ct.png');
 }
 
 #shapeRight {
-    background-image: url('../img/tc.png');
-    background-size: contain;
-    width: 40%;
-    height: 40%;
-    background-position: top left;
-    background-repeat: no-repeat;
+    background-image: url('../img/ct.png');
 }
 
 #shapeMid {
-    background-image: url('../img/tc.png');
+    background-image: url('../img/ct.png');
+}
+
+.shape {
     background-size: contain;
     width: 40%;
     height: 40%;
@@ -49,3 +42,8 @@
     max-width: 78px;
     height: auto;
 }
+
+.overlay {
+    border-radius: 8px; /* Optional: Rounded corners to match image */
+    box-shadow: 0 0 20px 10px rgb(255, 230, 0); /* Adjust the glow effect here */
+  }
