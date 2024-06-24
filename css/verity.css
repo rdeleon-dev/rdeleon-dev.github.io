@@ -1,0 +1,51 @@
+#map {
+    background-image: url('../img/Map.png');
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#shapeLeft {
+    background-image: url('../img/tc.png');
+    background-size: contain;
+    width: 40%;
+    height: 40%;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+#shapeRight {
+    background-image: url('../img/tc.png');
+    background-size: contain;
+    width: 40%;
+    height: 40%;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+#shapeMid {
+    background-image: url('../img/tc.png');
+    background-size: contain;
+    width: 40%;
+    height: 40%;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+#spotLeft img {
+    max-width: 78px;
+    height: auto;
+}
+
+#spotRight img {
+    max-width: 78px;
+    height: auto;
+}
+
+#spotMid img {
+    margin-top: 90px;
+    max-width: 78px;
+    height: auto;
+}
