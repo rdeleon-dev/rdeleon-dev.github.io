@@ -61,7 +61,8 @@ spots.forEach(spot => {
 
 guardians.forEach(guardian => {
     guardian.addEventListener('click', e => {
-        if(shapeHolding.length == 1 && e.target.dataset.swapShape == '') {
+        var parentShape = e.target.parentElement.dataset.shape;
+        if(shapeHolding.length == 1 && e.target.dataset.swapShape == '' && parentShape.includes(shapeHolding)) {
             e.target.dataset.swapShape = shapeHolding;
             e.target.nextElementSibling.style = "display: block";
             shapeHolding = [];
@@ -78,7 +79,7 @@ guardians.forEach(guardian => {
             buff.innerText = '';
         }
 
-        if(Object.keys(possibleDrops).length == 0) {
+        if(document.querySelectorAll("[data-type='shape'").length == 0) {
             spawnKnights();
         }
 
