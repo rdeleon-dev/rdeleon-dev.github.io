@@ -54,6 +54,10 @@ spots.forEach(spot => {
                 buff.innerText = shapeToWord(shapeHolding)
                 e.target.dataset.type = 'blank';
             }
+
+            if(document.querySelectorAll("[data-type='shape'").length == 0) {
+                spawnKnights();
+            }
             
         }
     });
@@ -77,10 +81,6 @@ guardians.forEach(guardian => {
         if(shapeHolding.length == 2) {
             shapeHolding = [];
             buff.innerText = '';
-        }
-
-        if(document.querySelectorAll("[data-type='shape'").length == 0) {
-            spawnKnights();
         }
 
     });
