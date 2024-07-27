@@ -9,8 +9,9 @@ const shapes = {
 
 var shapeHolding = [];
 
-var possibleDrops = shuffler(shapes);
-var threeD = generateThreeDShapes(possibleDrops);
+var callout = shuffler(shapes);
+var possibleDrops = ['c', 't', 's'];
+var threeD = generateThreeDShapes(callout);
 var shapesToSwap = [];
 
 //display callouts
@@ -33,8 +34,20 @@ spots.forEach(spot => {
     spot.addEventListener('click', e => {
 
         
-        var index = randomizeDrop(possibleDrops);
+        // var index = randomizeDrop(possibleDrops);
+        switch(e.target.parentNode.id) {
+            case 'spotLeft': 
+                index = 0;
+                break;
+            case 'spotRight':
+                index = 2;
+                break;
+            case 'spotMid':
+                index = 1;
+                break;
+        }
         const shape = possibleDrops[index];
+        
 
         if(e.target.dataset.type == 'enemy')
         {
@@ -55,7 +68,7 @@ spots.forEach(spot => {
                 e.target.dataset.type = 'blank';
             }
 
-            if(document.querySelectorAll("[data-type='shape'").length == 0) {
+            if(document.querySelectorAll("[data-type='shape'").length == 0 && document.querySelectorAll("[data-type='enemy'").length == 0) {
                 spawnKnights();
             }
             
@@ -184,8 +197,7 @@ function shapeToWord(shape) {
 }
 
 function spawnKnights() {
-    console.log('test');
-    possibleDrops = shuffler(shapes);
+    possibleDrops = ['c', 't', 's'];
     spots.forEach(spot => {
         spot.dataset.type = 'enemy';
         spot.src = 'img/hive.png';
