@@ -15,14 +15,14 @@ var threeD = generateThreeDShapes(callout);
 var shapesToSwap = [];
 
 //display callouts
-document.getElementById('callouts').innerText = Object.values(possibleDrops).join('').toUpperCase(); 
+document.getElementById('callouts').innerText = Object.values(callout).join('').toUpperCase(); 
 
 //display shape
 var buff = document.getElementById('buff');
 buff.innerText = shapeHolding;
 
 // display three d shapes
-for (const [key, value] of Object.entries(possibleDrops)) {
+for (const [key, value] of Object.entries(callout)) {
 
     const shape = document.getElementById(`shape${key}`); 
     const shapes = [value, threeD[key]];
